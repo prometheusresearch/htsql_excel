@@ -8,6 +8,24 @@ support for the Excel file format.
 .. _`HTSQL`: http://htsql.org/
 
 
+Installation
+============
+
+Install this package like you would any other Python package::
+
+    $ pip install htsql_excel
+
+Then, enable the ``htsql_excel`` extension when you invoke HTSQL. E.g.::
+
+    $ htsql-ctl -E htsql_excel ...
+
+Or, in your HTSQL configuration YAML file::
+
+    htsql:
+      db: ...
+    htsql_excel:
+
+
 Formatters
 ==========
 
