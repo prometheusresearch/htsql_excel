@@ -283,7 +283,7 @@ class SummonXLSX(SummonFormat):
 
 class AcceptXLSX(Accept):
     call(XLSX_MIME_TYPE)
-    format = XLSFormat
+    format = XLSXFormat
 
 
 class EmitXLSXHeaders(EmitExcelHeaders):
