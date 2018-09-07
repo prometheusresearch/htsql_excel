@@ -2,12 +2,8 @@
 # Copyright (c) 2016, Prometheus Research, LLC
 #
 
-try:
-    from cStringIO import StringIO
-except ImportError:
-    from StringIO import StringIO
-
 import math
+from io import BytesIO
 
 import openpyxl
 import xlwt
@@ -180,11 +176,14 @@ class OpaqueToExcel(ToExcel):
         if value is None:
             yield [None]
             return
-        if not isinstance(value, unicode):
-            try:
-                value = str(value).decode('utf-8')
-            except UnicodeDecodeError:
-                value = unicode(repr(value))
+        if not isinstance(value, str):
+            s = str(value)
+            if isinstance(s, bytes):
+                try:
+                    s = s.decode('utf-8')
+                except UnicodeDecodeError:
+                    s = unicode(repr(value))
+            value = s
         yield [value]
 
 
@@ -219,7 +218,7 @@ class EmitExcelHeaders(EmitHeaders):
 class EmitExcel(Emit):
     def __call__(self):
         product = to_excel(self.meta.domain, [self.meta])
-        output = StringIO()
+        output = BytesIO()
         self.render(output, product)
         yield output.getvalue()
 
