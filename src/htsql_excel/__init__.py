@@ -195,8 +195,8 @@ def make_name(meta):
     if meta.header:
         filename = meta.header.encode('utf-8')
     if not filename:
-        filename = 'data'
-    filename = filename.replace('\\', '\\\\').replace('"', '\\"')
+        filename = b'data'
+    filename = filename.replace(b'\\', b'\\\\').replace(b'"', b'\\"')
     return filename
 
 
