@@ -3,6 +3,12 @@ HTSQL_EXCEL Change History
 **************************
 
 
+0.1.4 (TBD)
+===========
+
+* Changed license to Apache v2.
+
+
 0.1.1 (2017-05-04)
 ==================
 

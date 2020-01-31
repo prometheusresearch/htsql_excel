@@ -8,18 +8,18 @@ from setuptools import setup, find_packages
 
 setup(
     name='htsql_excel',
-    version='0.1.3',
+    version='0.1.4',
     description='An HTSQL extension that adds basic Excel support.',
     long_description=open('README.rst', 'r').read(),
     keywords='htsql extension excel xls xlsx',
     author='Prometheus Research, LLC',
     author_email='contact@prometheusresearch.com',
-    license='AGPLv3',
+    license='Apache-2.0',
     classifiers=[
         'Programming Language :: Python :: 2.7',
-        'License :: OSI Approved :: GNU Affero General Public License v3',
+        'License :: OSI Approved :: Apache Software License',
     ],
-    url='https://bitbucket.org/prometheus/htsql_excel',
+    url='https://github.com/prometheusresearch/htsql_excel',
     package_dir={'': 'src'},
     packages=find_packages('src'),
     zip_safe=True,

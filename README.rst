@@ -38,8 +38,8 @@ Office Open XML format introduced with Excel 2007).
 License/Copyright
 =================
 
-This project is licensed under the GNU Affero General Public License, version
-3. See the accompanying ``LICENSE.rst`` file for details.
+This project is released under the Apache v2 license. See the accompanying
+``LICENSE.rst`` file for details.
 
 Copyright (c) 2016, Prometheus Research, LLC
 
